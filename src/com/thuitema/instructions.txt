@@ -1,0 +1,14 @@
+Scenario: You are an IT Specialist for a company. You are given the task of creating emails for new hires.
+
+The application should do the following:
+ • Generate an email based on the template: firstname.lastname@department.company.com
+ • Determine the department of the employee
+ • Generate a random 8 character string for a password
+ • Have set methods for names, password, one to set the mailbox capacity, and one to define an alternate email
+ • Have get methods
+
+ Email Class Outline:
+ Fields: firstname, lastname, email, department, password, mailbox capacity (default 500 MB), altEmail
+ Constructors: non-default constructor. Parameters: firstName, lastName, department.
+ Private methods: generateEmail, generatePassword
+ Public Methods: getters and setters, toString, equals
