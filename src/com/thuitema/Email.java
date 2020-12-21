@@ -10,7 +10,7 @@ public class Email {
     private String department;
     private String email;
     private String password;
-    private String mailboxCap;
+    private int mailboxCap;
     private String altEmail;
 
 
@@ -21,7 +21,7 @@ public class Email {
         this.department = department;
         this.email = generateEmail(this.firstName, this.lastName, this.department);
         this.password = generatePassword();
-        this.mailboxCap = "500 MB";
+        this.mailboxCap = 500;
         this.altEmail = "N/A";
     }
 
@@ -35,8 +35,7 @@ public class Email {
 
     // Generate Password
     private String generatePassword() {
-        // I have not learned Java arrays yet in AP CSA as of December 2020
-        // I used this video for this method: https://www.youtube.com/watch?v=CZYeTblcOU8
+        // This video helped me write this method: https://www.youtube.com/watch?v=CZYeTblcOU8
 
         String characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890";
         String password = "";
@@ -62,13 +61,13 @@ public class Email {
 
     // toString Method
     public String toString() {
-        return "First Name: " + firstName + "\n" +
-                "Last Name: " + lastName + "\n" +
-                "Department: " + department + "\n" +
-                "Email: " + email + "\n" +
-                "Password: " + password + "\n" +
-                "Mailbox Capacity: " + mailboxCap + "\n" +
-                "Alternate Email: " + altEmail + "\n";
+        return "\tFirst Name: " + firstName + "\n" +
+                "\tLast Name: " + lastName + "\n" +
+                "\tDepartment: " + department + "\n" +
+                "\tEmail: " + email + "\n" +
+                "\tPassword: " + password + "\n" +
+                "\tMailbox Capacity: " + mailboxCap + "\n" +
+                "\tAlternate Email: " + altEmail + "\n";
     }
 
 
@@ -79,7 +78,7 @@ public class Email {
                 this.department.equals(other.department) &&
                 this.email.equals(other.email) &&
                 this.password.equals(other.password) &&
-                this.mailboxCap.equals(other.mailboxCap) &&
+                this.mailboxCap == other.mailboxCap &&
                 this.altEmail.equals(other.altEmail);
     }
 
@@ -105,7 +104,7 @@ public class Email {
         return password;
     }
 
-    public String getMailboxCap() {
+    public int getMailboxCap() {
         return mailboxCap;
     }
 
@@ -135,7 +134,7 @@ public class Email {
         this.password = password;
     }
 
-    public void setMailboxCap(String mailboxCap) {
+    public void setMailboxCap(int mailboxCap) {
         this.mailboxCap = mailboxCap;
     }
 
