@@ -66,7 +66,7 @@ public class Email {
                 "\tDepartment: " + department + "\n" +
                 "\tEmail: " + email + "\n" +
                 "\tPassword: " + password + "\n" +
-                "\tMailbox Capacity: " + mailboxCap + "\n" +
+                "\tMailbox Capacity (MB): " + mailboxCap + "\n" +
                 "\tAlternate Email: " + altEmail + "\n";
     }
 

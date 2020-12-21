@@ -14,6 +14,7 @@ public class Main {
 
         runMenu(scanner, email);
 
+        // Things to add: add functionality for users to create & edit multiple objects
     }
 
     public static Email createEmail(Scanner scanner) {
